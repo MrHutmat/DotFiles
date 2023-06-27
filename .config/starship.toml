@@ -1,0 +1,93 @@
+format = """ 
+$time
+$os\
+$username\
+$hostname\
+$directory\
+$all\
+"""
+
+
+
+[os]
+disabled = false # Disabled by default
+
+[os.symbols]
+Windows = " "
+Ubuntu = " "
+Pop = " "
+
+[time]
+time_format = "%R"
+format = "[󰅐 $time]($style) "
+style = "white"
+disabled = false
+
+[nodejs]
+format = "via [ Node.js $version]($style) "
+
+[memory_usage]
+symbol = " "
+disabled = false
+
+[java]
+symbol = " "
+
+[python]
+symbol = " "
+
+[package]
+symbol = " "
+
+
+
+
+[aws]
+style = "bold #ffb86c"
+
+[kotlin]
+symbol = " "
+
+[character]
+error_symbol = "[](bold #ff5555)"
+success_symbol = "[](bold #50fa7b)"
+
+[cmd_duration]
+style = "bold #f1fa8c"
+show_milliseconds = false
+disabled = false
+min_time = 4
+
+[directory]
+style = "bold #50fa7b"
+read_only = " "
+
+[git_branch]
+style = "bold #ff79c6"
+
+
+[git_status]
+style = "bold #ff5555"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+stashed = "${count}*"
+modified = "${count}+"
+deleted =  "${count}-"
+conflicted =  "${count}~"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+untracked = "${count}?"
+staged = "${count}+"
+
+
+[hostname]
+style = "bold #bd93f9"
+ssh_only = false
+format = 'on [$hostname]($style) '
+trim_at = "."
+disabled = false
+
+[username]
+format = "[$user]($style) "
+style_user = "bold #8be9fd"
+disabled = false
+show_always = true
